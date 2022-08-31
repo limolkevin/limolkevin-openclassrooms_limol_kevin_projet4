@@ -193,10 +193,7 @@ a:hover {
     border-color: rgba(0, 0, 0, .7)
 }
 
-.d-bloc .panel,
-.l-bloc {
-    color: rgba(0, 0, 0, .5)
-}
+
 
 .d-bloc .panel button:hover,
 .l-bloc button:hover {
@@ -637,7 +634,8 @@ h4 {
 .cta-hero,
 .ltc-white,
 .white {
-    color: #fff !important
+    color: rgb(6, 0, 0) !important;
+    /*changement de la couleur */
 }
 
 .container {
@@ -749,9 +747,6 @@ img {
     text-decoration: underline !important
 }
 
-.bgc-white {
-    background-color: #fff
-}
 
 .bgc-dark-slate-blue {
     background-color: #364577
@@ -775,7 +770,10 @@ img {
     background: #c27956 !important;
     color: #fff !important
 }
-
+.btn-atomic-tangerine:focus {
+    box-shadow: 0 5px 5px 5px red;
+    /*ajout d'un focus pour les boutons*/
+}
 .ltc-white:hover {
     color: #ccc !important
 }
@@ -830,13 +828,13 @@ img {
     }
 }
 
-@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape) {
+@media only screen and (min-width:768px) and (max-width:1024px) and (orientation:landscape) {
     .b-parallax {
         background-attachment: scroll
     }
 }
 
-@media only screen and (min-device-width:1024px) and (max-device-width:1366px) and (-webkit-min-device-pixel-ratio:1.5) {
+@media only screen and (min-width:1024px) and (max-width:1366px) and (-webkit-min-device-pixel-ratio:1.5) {
     .b-parallax {
         background-attachment: scroll
     }
@@ -857,11 +855,6 @@ img {
         position: relative
     }
 
-    .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right)
-    }
-
     .bloc-group,
     .bloc-group .bloc {
         display: block;
@@ -871,8 +864,6 @@ img {
     .bloc-fill-screen .fill-bloc-bottom-edge,
     .bloc-fill-screen .fill-bloc-top-edge {
         padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right)
     }
 }
 
